@@ -1,4 +1,4 @@
-<h2>Week1.Day1 Practical: Hands-On with C++ STANDARD Data Types and <code>std::string</code></h2>
+<h2>Week1.Day1 Practical: Hands-On with C++ STANDARD Data Types and <code>string</code></h2>
 
 <hr>
 
@@ -21,8 +21,8 @@ cout << "Age: " << age << "\nPi: " << pi << "\nInitial: " << initial << endl;
 
 <hr>
 
-<h3>Exercise 2: Exploring <code>std::string</code> (15 minutes)</h3>
-<p>Deeply explore the functionalities of <code>std::string</code> through hands-on tasks.</p>
+<h3>Exercise 2: Exploring <code>string</code> (15 minutes)</h3>
+<p>Deeply explore the functionalities of <code>string</code> through hands-on tasks.</p>
 
 <h4>Task 1: String Initialization and Concatenation</h4>
 <ul>
@@ -30,9 +30,9 @@ cout << "Age: " << age << "\nPi: " << pi << "\nInitial: " << initial << endl;
   <li>Concatenate them to form the full name.</li>
 </ul>
 <h4>Sample Solution:</h4>
-<pre><code>std::string firstName = "John";
-std::string lastName = "Doe";
-std::string fullName = firstName + " " + lastName;
+<pre><code>string firstName = "John";
+string lastName = "Doe";
+string fullName = firstName + " " + lastName;
 cout << "Full Name: " << fullName << endl;
 </code></pre>
 
@@ -74,6 +74,6 @@ cout << "First Character: " << firstChar << "\nLength: " << length << "\nIs Equa
 <hr>
 
 <h3>Wrap-up (2 minutes)</h3>
-<p>Through these exercises, you have worked with basic data types and explored the <code>std::string</code> class in depth. These foundational skills are essential for any C++ developer. Keep practicing and exploring further to deepen your understanding.</p>
+<p>Through these exercises, you have worked with basic data types and explored the <code>string</code> class in depth. These foundational skills are essential for any C++ developer. Keep practicing and exploring further to deepen your understanding.</p>
 
 <hr>

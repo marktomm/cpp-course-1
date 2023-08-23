@@ -1,4 +1,4 @@
-<h2>Week1.Day1 Theory: Dive into C++ with STANDARD Data Types and <code>std::string</code></h2>
+<h2>Week1.Day1 Theory: Dive into C++ with STANDARD Data Types and <code>string</code></h2>
 
 <hr>
 
@@ -45,30 +45,30 @@
 <pre><code>char initial = 'A';
 </code></pre>
 
-<h4>Strings (<code>std::string</code>):</h4>
+<h4>Strings (<code>string</code>):</h4>
 <ul>
   <li><strong>Size:</strong> Depends on the content length.</li>
   <li><strong>Operations:</strong> Provides methods for concatenation, insertion, deletion, and more.</li>
   <li><strong>Values:</strong> A collection of characters.</li>
 </ul>
-<pre><code>std::string greeting = "Hello, World!";
+<pre><code>string greeting = "Hello, World!";
 </code></pre>
 
 <hr>
 
-<h3>Deep Dive into <code>std::string</code> (10 minutes):</h3>
-<p><code>std::string</code> is an essential part of C++, allowing developers to manipulate text. Here we will explore key functions and capabilities.</p>
+<h3>Deep Dive into <code>string</code> (10 minutes):</h3>
+<p><code>string</code> is an essential part of C++, allowing developers to manipulate text. Here we will explore key functions and capabilities.</p>
 
 <h4>Creating and Initializing:</h4>
 <ul>
   <li><strong>Basic Initialization:</strong></li>
 </ul>
-<pre><code>std::string name = "Alice";
+<pre><code>string name = "Alice";
 </code></pre>
 <ul>
   <li><strong>Concatenation (Adding Strings Together):</strong></li>
 </ul>
-<pre><code>std::string fullName = name + " Johnson";
+<pre><code>string fullName = name + " Johnson";
 </code></pre>
 
 <h4>Manipulating Strings:</h4>
@@ -105,16 +105,16 @@ fullName.erase(0, 5);
 </ul>
 <pre><code>bool isEqual = (fullName == "Alice Ms. Johnson");
 </code></pre>
-<p>These capabilities of <code>std::string</code> provide powerful tools for string manipulation, and they underline why understanding this class is essential for a new C++ learner.</p>
+<p>These capabilities of <code>string</code> provide powerful tools for string manipulation, and they underline why understanding this class is essential for a new C++ learner.</p>
 
 <hr>
 
-<h2>Using std::string::find</h2>
+<h2>Using string::find</h2>
 
-<p>The <code>std::string::find</code> method is a powerful tool for searching within a string. It looks for a specified substring or character and returns the position of the first occurrence. If the substring or character is not found, it returns <code>std::string::npos</code>.</p>
+<p>The <code>string::find</code> method is a powerful tool for searching within a string. It looks for a specified substring or character and returns the position of the first occurrence. If the substring or character is not found, it returns <code>string::npos</code>.</p>
 
 <h3>Syntax</h3>
-<pre><code>size_t std::string::find(const std::string&amp; str, size_t pos = 0) const;</code></pre>
+<pre><code>size_t string::find(const string&amp; str, size_t pos = 0) const;</code></pre>
 
 <ul>
   <li><code>str</code>: The substring to search for.</li>
@@ -122,12 +122,12 @@ fullName.erase(0, 5);
 </ul>
 
 <h3>Example</h3>
-<pre><code>std::string text = "The quick brown fox jumps over the lazy dog.";
+<pre><code>string text = "The quick brown fox jumps over the lazy dog.";
 size_t position = text.find("fox");
-if (position != std::string::npos) {
-  std::cout << "'fox' found at position: " << position << std::endl;
+if (position != string::npos) {
+  cout << "'fox' found at position: " << position << endl;
 } else {
-  std::cout << "'fox' not found." << std::endl;
+  cout << "'fox' not found." << endl;
 }
 </code></pre>
 

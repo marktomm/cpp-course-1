@@ -6,9 +6,9 @@
 <p>You'll be working with basic string operations, such as concatenation, transformation to uppercase/lowercase, and reversal.</p>
 
 <ul>
-  <li>Initialize a string named <code>message</code> with the value: "Hello, World!". (<code>std::string</code>)</li>
-  <li>Convert the <code>message</code> string to uppercase and then to lowercase. (<code>std::transform</code>)</li>
-  <li>Reverse the <code>message</code> string. (<code>std::reverse</code>)</li>
+  <li>Initialize a string named <code>message</code> with the value: "Hello, World!". (<code>string</code>)</li>
+  <li>Convert the <code>message</code> string to uppercase and then to lowercase. (<code>transform</code>)</li>
+  <li>Reverse the <code>message</code> string. (<code>reverse</code>)</li>
 </ul>
 
 <h3>2. String Length Calculation:</h3>
@@ -19,7 +19,7 @@
 </ul>
 
 <h3>3. Working with C++ Containers:</h3>
-<p>You'll experiment with C++ containers like <code>std::vector</code> and <code>std::map</code>.</p>
+<p>You'll experiment with C++ containers like <code>vector</code> and <code>map</code>.</p>
 
 <ul>
   <li>Create a <code>vector</code> and add elements to it.</li>
@@ -42,10 +42,10 @@
 <hr>
 
 <pre><code>// Basic String Manipulations:
-std::string message = "Hello, World!";
-std::transform(message.begin(), message.end(), message.begin(), ::toupper); // Uppercase
-std::transform(message.begin(), message.end(), message.begin(), ::tolower); // Lowercase
-std::reverse(message.begin(), message.end()); // Reverse
+string message = "Hello, World!";
+transform(message.begin(), message.end(), message.begin(), ::toupper); // Uppercase
+transform(message.begin(), message.end(), message.begin(), ::tolower); // Lowercase
+reverse(message.begin(), message.end()); // Reverse
 </code></pre>
 
 <hr>
@@ -59,9 +59,9 @@ while (message[len] != '\0') len++;
 <hr>
 
 <pre><code>// Working with C++ Containers:
-std::vector<int> numbers = {10, 20, 30};
+vector<int> numbers = {10, 20, 30};
 numbers.push_back(40); // Adding to the vector
-std::map<std::string, int> ages;
+map<string, int> ages;
 ages["John"] = 25;
 ages["Jane"] = 30;
 // Iterating and accessing elements
@@ -72,9 +72,9 @@ ages["Jane"] = 30;
 <pre><code>// Understanding Boolean Types:
 bool isAdult = true;
 if (isAdult) {
-    std::cout << "You are an adult." << std::endl;
+    cout << "You are an adult." << endl;
 } else {
-    std::cout << "You are not an adult." << std::endl;
+    cout << "You are not an adult." << endl;
 }
 </code></pre>
 
