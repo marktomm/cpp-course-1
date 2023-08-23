@@ -1,81 +1,126 @@
 <h2>Practice Task Descriptions</h2>
-
 <hr>
 
-<h3>1. Basic String Manipulations:</h3>
-<p>You'll be working with basic string operations, such as concatenation, transformation to uppercase/lowercase, and reversal.</p>
-
+<h3>1. Basic String Concatenation:</h3>
+<p>You'll be practicing basic string concatenation in this task.</p>
 <ul>
-  <li>Initialize a string named <code>message</code> with the value: "Hello, World!". (<code>string</code>)</li>
-  <li>Convert the <code>message</code> string to uppercase and then to lowercase. (<code>transform</code>)</li>
-  <li>Reverse the <code>message</code> string. (<code>reverse</code>)</li>
+  <li>Initialize two strings named <code>firstName</code> and <code>lastName</code>.</li>
+  <li>Concatenate them with a space in between and store the result in a string variable named <code>fullName</code>.</li>
 </ul>
+<hr>
 
-<h3>2. String Length Calculation:</h3>
-<p>You'll manually calculate the length of a string without using the <code>length</code> function.</p>
-
+<h3>2. Substring Extraction:</h3>
+<p>Extract a specific substring from a given string.</p>
 <ul>
-  <li>Find the length of the <code>message</code> string and store it in an integer variable <code>len</code>.</li>
+  <li>Initialize a string named <code>content</code> with the value: "C++ Programming Language".</li>
+  <li>Use the <code>substr</code> method to extract the word "Programming" and store it in a string variable named <code>subContent</code>.</li>
 </ul>
+<hr>
 
-<h3>3. Working with C++ Containers:</h3>
-<p>You'll experiment with C++ containers like <code>vector</code> and <code>map</code>.</p>
-
+<h3>3. Finding a Character:</h3>
+<p>Find the first occurrence of a specific character within a string.</p>
 <ul>
-  <li>Create a <code>vector</code> and add elements to it.</li>
-  <li>Create a <code>map</code> to store key-value pairs.</li>
-  <li>Access elements and iterate through the containers.</li>
+  <li>Initialize a string named <code>text</code> with the value: "Welcome to the world of C++".</li>
+  <li>Use the <code>find</code> method to locate the first occurrence of the character 'o' and store the result in a variable named <code>position</code>.</li>
 </ul>
+<hr>
 
-<h3>4. Understanding Boolean Types:</h3>
-<p>Explore the boolean data type and conditional expressions.</p>
-
+<h3>4. Replace Substring:</h3>
+<p>Replace a specific substring within a given string.</p>
 <ul>
-  <li>Create and initialize a boolean variable.</li>
-  <li>Use conditional expressions to make decisions.</li>
+  <li>Initialize a string named <code>sentence</code> with the value: "I love cats".</li>
+  <li>Use the <code>replace</code> method to change the word "cats" to "dogs" in the <code>sentence</code> string.</li>
 </ul>
-
 <hr>
 
-<h3>Answers:</h3>
-
+<h3>5. Convert String to Uppercase:</h3>
+<p>Convert the entire content of a string to uppercase.</p>
+<ul>
+  <li>Initialize a string named <code>text</code> with the value: "Learning C++".</li>
+  <li>Convert the entire string to uppercase.</li>
+</ul>
 <hr>
 
-<pre><code>// Basic String Manipulations:
-string message = "Hello, World!";
-transform(message.begin(), message.end(), message.begin(), ::toupper); // Uppercase
-transform(message.begin(), message.end(), message.begin(), ::tolower); // Lowercase
-reverse(message.begin(), message.end()); // Reverse
+<h3>6. String Length:</h3>
+<p>Find the length of a given string.</p>
+<ul>
+  <li>Initialize a string named <code>message</code> with the value: "Welcome!".</li>
+  <li>Retrieve the length of the string and store it in a variable named <code>length</code>.</li>
+</ul>
+<hr>
+
+<h3>7. Reverse String:</h3>
+<p>Reverse the content of a given string.</p>
+<ul>
+  <li>Initialize a string named <code>original</code> with the value: "C++ is Fun".</li>
+  <li>Reverse the content of the string.</li>
+</ul>
+<hr>
+
+<h3>8. Insert Substring:</h3>
+<p>Insert a substring into a given position within a string.</p>
+<ul>
+  <li>Initialize a string named <code>text</code> with the value: "C++ is powerful".</li>
+  <li>Insert the substring " and easy" at the end of the string.</li>
+</ul>
+<hr>
+
+<h3>9. Erase Substring:</h3>
+<p>Erase a specific substring from a given string.</p>
+<ul>
+  <li>Initialize a string named <code>sentence</code> with the value: "C++ is hard but rewarding".</li>
+  <li>Erase the substring " hard" from the string.</li>
+</ul>
+<hr>
+
+<h3>10. Compare Strings:</h3>
+<p>Compare two given strings to check if they are equal.</p>
+<ul>
+  <li>Initialize two strings named <code>str1</code> and <code>str2</code> with the values: "C++" and "C++".</li>
+  <li>Compare the two strings and store the result in a boolean variable named <code>isEqual</code>.</li>
+</ul>
+<hr>
+
+<h2>Answers:</h2>
+<pre><code>// Task 1:
+std::string firstName = "John";
+std::string lastName = "Doe";
+std::string fullName = firstName + " " + lastName;
+
+// Task 2:
+std::string content = "C++ Programming Language";
+std::string subContent = content.substr(3, 11);
+
+// Task 3:
+std::string text = "Welcome to the world of C++";
+size_t position = text.find('o');
+
+// Task 4:
+std::string sentence = "I love cats";
+sentence.replace(sentence.find("cats"), 4, "dogs");
+
+// Task 5:
+std::string text = "Learning C++";
+std::transform(text.begin(), text.end(), text.begin(), ::toupper);
+
+// Task 6:
+std::string message = "Welcome!";
+size_t length = message.length();
+
+// Task 7:
+std::string original = "C++ is Fun";
+std::reverse(original.begin(), original.end());
+
+// Task 8:
+std::string text = "C++ is powerful";
+text.insert(text.size(), " and easy");
+
+// Task 9:
+std::string sentence = "C++ is hard but rewarding";
+sentence.erase(sentence.find(" hard"), 5);
+
+// Task 10:
+std::string str1 = "C++";
+std::string str2 = "C++";
+bool isEqual = (str1 == str2);
 </code></pre>
-
-<hr>
-
-<pre><code>// String Length Calculation:
-int len = 0;
-while (message[len] != '\0') len++;
-// Result: 'len' will be the length of the message string.
-</code></pre>
-
-<hr>
-
-<pre><code>// Working with C++ Containers:
-vector<int> numbers = {10, 20, 30};
-numbers.push_back(40); // Adding to the vector
-map<string, int> ages;
-ages["John"] = 25;
-ages["Jane"] = 30;
-// Iterating and accessing elements
-</code></pre>
-
-<hr>
-
-<pre><code>// Understanding Boolean Types:
-bool isAdult = true;
-if (isAdult) {
-    cout << "You are an adult." << endl;
-} else {
-    cout << "You are not an adult." << endl;
-}
-</code></pre>
-
-<hr>
