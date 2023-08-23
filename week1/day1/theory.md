@@ -10,6 +10,14 @@
 <h3>Variables and STANDARD Data Types (8 minutes):</h3>
 <p>C++ provides a rich set of data types that allow developers to handle various types of data.</p>
 
+<p>When we talk about data types, we focus on three main things: how big they are, what actions you can do with them, and what values they can hold.</p>
+
+<ul>
+  <li>Size: Determines how big the data types are.</li>
+  <li>Permissible Operations: Defines what actions can be performed with the data types.</li>
+  <li>Valid Value Range: Specifies what values the data types can hold.</li>
+</ul>
+
 <h4>Integers (<code>int</code>):</h4>
 <ul>
   <li><strong>Size:</strong> Typically 4 bytes, can vary depending on the platform.</li>
@@ -22,8 +30,8 @@
 <h4>Floating-Point Numbers (<code>double</code>):</h4>
 <ul>
   <li><strong>Size:</strong> Generally 8 bytes.</li>
-  <li><strong>Operations:</strong> Handles decimal arithmetic operations.</li>
-  <li><strong>Values:</strong> Can store large or small decimal numbers.</li>
+  <li><strong>Operations:</strong> Handles floating point arithmetic operations.</li>
+  <li><strong>Values:</strong> Can store large or small floating point numbers.</li>
 </ul>
 <pre><code>double pi = 3.14;
 </code></pre>
@@ -100,3 +108,30 @@ fullName.erase(0, 5);
 <p>These capabilities of <code>std::string</code> provide powerful tools for string manipulation, and they underline why understanding this class is essential for a new C++ learner.</p>
 
 <hr>
+
+<h2>Using std::string::find</h2>
+
+<p>The <code>std::string::find</code> method is a powerful tool for searching within a string. It looks for a specified substring or character and returns the position of the first occurrence. If the substring or character is not found, it returns <code>std::string::npos</code>.</p>
+
+<h3>Syntax</h3>
+<pre><code>size_t std::string::find(const std::string&amp; str, size_t pos = 0) const;</code></pre>
+
+<ul>
+  <li><code>str</code>: The substring to search for.</li>
+  <li><code>pos</code>: The starting position in the string to begin searching from. The default value is 0.</li>
+</ul>
+
+<h3>Example</h3>
+<pre><code>std::string text = "The quick brown fox jumps over the lazy dog.";
+size_t position = text.find("fox");
+if (position != std::string::npos) {
+  std::cout << "'fox' found at position: " << position << std::endl;
+} else {
+  std::cout << "'fox' not found." << std::endl;
+}
+</code></pre>
+
+<p>In this example, the <code>find</code> method locates the substring "fox" within the larger string and prints the position. If the substring is not found, it prints a message indicating that the substring was not found.</p>
+
+<hr>
+
