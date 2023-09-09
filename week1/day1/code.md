@@ -72,8 +72,3 @@ cout << "First Character: " << firstChar << "\nLength: " << length << "\nIs Equa
 </code></pre>
 
 <hr>
-
-<h3>Wrap-up (2 minutes)</h3>
-<p>Through these exercises, you have worked with basic data types and explored the <code>string</code> class in depth. These foundational skills are essential for any C++ developer. Keep practicing and exploring further to deepen your understanding.</p>
-
-<hr>
