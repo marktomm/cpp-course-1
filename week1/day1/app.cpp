@@ -1,5 +1,4 @@
-using namespace std;
 int main() {
-    // Write code here
+    // Your code begins and ends here
     return 0;
 }

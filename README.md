@@ -2,15 +2,15 @@
 
 ## Week 1 Day 1
 
-If you are in the root folder of this course and can do `cat README.md` then do `cd week1/day1` and the continue.
+If you are in the root folder of this course and can do `cat README.md` then do `cd week1/day1`.
 
-Build:
+C++ code is first built:
 
 ```shell
 ./build.sh
 ```
 
-Run:
+And then run:
 
 ```shell
 ./app

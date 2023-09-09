@@ -5,6 +5,15 @@
 <h3>Basic Structure of a C++ Program (1 minute):</h3>
 <p>Every C++ program begins with the <code>main</code> function. The code within this function is executed first, forming the core of the program. Returning <code>0</code> signifies successful execution.</p>
 
+<pre>
+<code>
+int main() {
+    // Your code begins and ends here
+    return 0;
+}
+</code>
+</pre>
+
 <hr>
 
 <h3>Variables and STANDARD Data Types (8 minutes):</h3>
@@ -25,6 +34,7 @@
   <li><strong>Values:</strong> Range from roughly -2 billion to 2 billion.</li>
 </ul>
 <pre><code>int age = 30;
+int age(30); // but this is not preferred with FUNDAMENTAL types
 </code></pre>
 
 <h4>Floating-Point Numbers (<code>double</code>):</h4>
@@ -40,7 +50,7 @@
 <ul>
   <li><strong>Size:</strong> Usually 1 byte.</li>
   <li><strong>Operations:</strong> Used for comparisons and assignments.</li>
-  <li><strong>Values:</strong> Includes ASCII characters, letters, and symbols.</li>
+  <li><strong>Values:</strong> Includes ASCII characters: letters and symbols.</li>
 </ul>
 <pre><code>char initial = 'A';
 </code></pre>
@@ -57,7 +67,7 @@
 <hr>
 
 <h3>Deep Dive into <code>string</code> (10 minutes):</h3>
-<p><code>string</code> is an essential part of C++, allowing developers to manipulate text. Here we will explore key functions and capabilities.</p>
+<p><code>string</code> is an essential part of C++, allowing developers to manipulate text. It is "STANDARD library type".Here we will explore key functions and capabilities.</p>
 
 <h4>Creating and Initializing:</h4>
 <ul>
@@ -109,12 +119,17 @@ fullName.erase(0, 5);
 
 <hr>
 
-<h2>Using string::find</h2>
+<h2>Using string.find</h2>
 
 <p>The <code>string::find</code> method is a powerful tool for searching within a string. It looks for a specified substring or character and returns the position of the first occurrence. If the substring or character is not found, it returns <code>string::npos</code>.</p>
 
+<p><code>::</code> is another symbol that C++ programmers use to show containment, i.e. when something is within something else. <code>string::find</code> means that string has something in itself named find and it is clarified that it is a function/method/procedure/behaviour. Something that you call like <code>fullName.find("Jack")</code></p>
+
+
+<p> <code>string::npos</code> is an integer type value (it is a whole number) that is bigger than any possible character string length in the world.</p>
+
 <h3>Syntax</h3>
-<pre><code>size_t string::find(const string&amp; str, size_t pos = 0) const;</code></pre>
+<pre><code>size_t string::find(string str, size_t pos = 0);</code></pre>
 
 <ul>
   <li><code>str</code>: The substring to search for.</li>
@@ -124,6 +139,9 @@ fullName.erase(0, 5);
 <h3>Example</h3>
 <pre><code>string text = "The quick brown fox jumps over the lazy dog.";
 size_t position = text.find("fox");
+// for now just remember that 'npos' is not taken 
+// directly from a string varialbe like text.npos
+// but rather it is referred from the string type
 if (position != string::npos) {
   cout << "'fox' found at position: " << position << endl;
 } else {

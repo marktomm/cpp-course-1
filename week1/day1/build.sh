@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# This file has a single line that builds a C++ source file
+
 # Input argument: Optional file name to build
 # If no argument is provided, the default file 'app.cpp' will be used
 
@@ -12,6 +14,7 @@ fi
 
 # Check if the specified file exists
 if [ -f "$FILE_TO_BUILD" ]; then
+    # THIS IS THE LINE THAT DOE THE BUILD
     g++ "$FILE_TO_BUILD" -Og -ggdb -o app
 else
     echo "Error: File '$FILE_TO_BUILD' does not exist."

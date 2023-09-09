@@ -1,0 +1,16 @@
+@startuml
+participant "Shell Process" as A
+participant "New Process" as B
+
+A -> B: ./build.sh
+activate B
+B -> B: Compile app.cpp
+B -> A: creates app, Returns 0
+deactivate B
+A -> B: ./app
+activate B
+B -> B: Running process: app
+B -> A: Returns 0 to the parent process
+deactivate B
+
+@enduml
