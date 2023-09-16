@@ -1,24 +1,15 @@
 #include <string>
 #include <iostream>
-#include <filesystem>
+#include <cstdint>
 
 using namespace std;
-namespace fs = std::filesystem;
 
-
-int main() {
-    // string name = "Alice";
-    string name("Alice");
-    string fullName = name + " Johnson"; 
-    cout << fullName << "\n";
-
-    int pos = fullName.find("Johnson");
-    cout << "pos:" << pos << "\n";
-    fullName.replace(pos, 7, "Smith");
-
-    // cout << fullName[0] << "\n"; 
-
-    cout << fullName << "\n"; 
-
+int main(int argc, char** argv) {
+    uint8_t y = 130;
+    char hello[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+    uint8_t x = 130;
+    cout << (uint32_t)x << '\n';
+    hello[6] = 200;
+    cout << (uint32_t)x << '\n';
     return 0;
 }

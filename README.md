@@ -21,3 +21,8 @@ And then run:
 ```shell
 ./app
 ```
+
+
+## Week 1 Day 2
+
+Also using `code/variant1`
