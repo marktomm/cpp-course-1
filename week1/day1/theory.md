@@ -1,3 +1,7 @@
+I remind you that we have a course on C++17 that has specifically 2 days a week, each day is 15 theroy, 15 minutes practice. Below is week 1 day 1. We have decided to make the next lessons 45 minutes long, with expected 20 minutes of theory and 25 minutes of practice with tutor. Provide week 1 day 2 full length material, make it (!1!) about char arrays (no asterisk sign!!!do introduce not pointers yet!!!). Show all possible motivating for future websocket/modbus protocol project usage variations using mainly for loops, do not inject a lot of libs even std bc day 1 was only fundamental types, string and iostream::cout. Compare them (the char arrays) with strings. People are vagualy familiar witha arrays, give them  a 5 minutes world class crash course to get the understanging. ASCII graphs with memory layout as blocks to illustrate are expected. Next (!2!) 5 minutes explain namespaces. Why are they viable and provide example of C way real world lib like gnu libhttps that use MHD_ prefixes everywhere because C doesnt have namespaces.  Next (!3!) 10 minutes speak about functions, argument passing(by value only: explain by values with ascii graphs), argument return (by value only this time).
+
+Week1Day1 material for reference:
+
 <h2>Week1.Day1 Theory: Dive into C++ with STANDARD Data Types and <code>string</code></h2>
 
 <hr>
