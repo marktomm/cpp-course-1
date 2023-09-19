@@ -1,88 +1,66 @@
-<h2>Practice Task Descriptions</h2>
-<hr>
+## Practice Task Descriptions
 
-<h3>1. Basic String Concatenation:</h3>
-<p>You'll be practicing basic string concatenation in this task.</p>
-<ul>
-  <li>Initialize two strings named <code>firstName</code> and <code>lastName</code>.</li>
-  <li>Concatenate them with a space in between and store the result in a string variable named <code>fullName</code>.</li>
-</ul>
-<hr>
+### 1. Join First and Last Name:
+Combine your first name and last name into a single name.  
+- Create (Initialize) two words named `firstName` and `lastName`.  
+- Join them together with a space between them and save this in a new word named `fullName`.  
 
-<h3>2. Substring Extraction:</h3>
-<p>Extract a specific substring from a given string.</p>
-<ul>
-  <li>Initialize a string named <code>content</code> with the value: "C++ Programming Language".</li>
-  <li>Use the <code>substr</code> method to extract the word "Programming" and store it in a string variable named <code>subContent</code>.</li>
-</ul>
-<hr>
+*Initialize*: To set an initial value for a variable in a program.
 
-<h3>3. Finding a Character:</h3>
-<p>Find the first occurrence of a specific character within a string.</p>
-<ul>
-  <li>Initialize a string named <code>text</code> with the value: "Welcome to the world of C++".</li>
-  <li>Use the <code>find</code> method to locate the first occurrence of the character 'o' and store the result in a variable named <code>position</code>.</li>
-</ul>
-<hr>
+### 2. Extract a Specific Word:
+Get a specific word from a given sentence.  
+- Create a word (string) named `content` with the value "C++ Programming Language".  
+- Use a special action (method) called `substr` to take out the word "Programming" and store it in a new word (string) named `subContent`.  
 
-<h3>4. Replace Substring:</h3>
-<p>Replace a specific substring within a given string.</p>
-<ul>
-  <li>Initialize a string named <code>sentence</code> with the value: "I love cats".</li>
-  <li>Use the <code>replace</code> method to change the word "cats" to "dogs" in the <code>sentence</code> string.</li>
-</ul>
-<hr>
+*Method*: A function that performs a specific task in a program.
 
-<h3>5. Convert String to Uppercase:</h3>
-<p>Convert the entire content of a string to uppercase.</p>
-<ul>
-  <li>Initialize a string named <code>text</code> with the value: "Learning C++".</li>
-  <li>Convert the entire string to uppercase.</li>
-</ul>
-<hr>
+### 3. Locate a Character:
+Find the first place a specific letter shows up in a sentence.  
+- Create a word (string) named `text` with the value "Welcome to the world of C++".  
+- Use the `find` method to find the first time the letter 'o' appears and store this location in a place (variable) named `position`.  
 
-<h3>6. String Length:</h3>
-<p>Find the length of a given string.</p>
-<ul>
-  <li>Initialize a string named <code>message</code> with the value: "Welcome!".</li>
-  <li>Retrieve the length of the string and store it in a variable named <code>length</code>.</li>
-</ul>
-<hr>
+*Variable*: A storage location in a program that holds a value or data.
 
-<h3>7. Reverse String:</h3>
-<p>Reverse the content of a given string.</p>
-<ul>
-  <li>Initialize a string named <code>original</code> with the value: "C++ is Fun".</li>
-  <li>Reverse the content of the string.</li>
-</ul>
-<hr>
+### 4. Change a Specific Word:
+Replace a certain word within a given sentence.  
+- Create a sentence (string) named `sentence` with the value "I love cats".  
+- Use the `replace` method to change the word "cats" to "dogs" in the sentence (string) `sentence`.  
 
-<h3>8. Insert Substring:</h3>
-<p>Insert a substring into a given position within a string.</p>
-<ul>
-  <li>Initialize a string named <code>text</code> with the value: "C++ is powerful".</li>
-  <li>Insert the substring " and easy" at the end of the string.</li>
-</ul>
-<hr>
+### 5. Make All Letters Uppercase:
+Change all the letters of a sentence to uppercase.  
+- Create a word (string) named `text` with the value "Learning C++".  
+- Make all the letters uppercase.  
 
-<h3>9. Erase Substring:</h3>
-<p>Erase a specific substring from a given string.</p>
-<ul>
-  <li>Initialize a string named <code>sentence</code> with the value: "C++ is hard but rewarding".</li>
-  <li>Erase the substring " hard" from the string.</li>
-</ul>
-<hr>
+### 6. Find the Length of a Sentence:
+Find out how many letters are in a given sentence.  
+- Create a sentence (string) named `message` with the value "Welcome!".  
+- Find the length of the sentence and store it in a place (variable) named `length`.  
 
-<h3>10. Compare Strings:</h3>
-<p>Compare two given strings to check if they are equal.</p>
-<ul>
-  <li>Initialize two strings named <code>str1</code> and <code>str2</code> with the values: "C++" and "C++".</li>
-  <li>Compare the two strings and store the result in a boolean variable named <code>isEqual</code>.</li>
-</ul>
-<hr>
+### 7. Reverse the Letters:
+Flip the order of letters in a given word.  
+- Create a word (string) named `original` with the value "C++ is Fun".  
+- Reverse the order of the letters.  
 
-<h2>Answers:</h2>
-<pre><code>// Task 1:
+### 8. Add Words to a Sentence:
+Insert additional words at a specific spot in a sentence.  
+- Create a sentence (string) named `text` with the value "C++ is powerful".  
+- Add the words " and easy" at the end of the sentence.  
+
+### 9. Remove Words from a Sentence:
+Delete certain words from a given sentence.  
+- Create a sentence (string) named `sentence` with the value "C++ is hard but rewarding".  
+- Delete the words " hard" from the sentence.  
+
+### 10. Compare Two Sentences:
+Check if two given sentences are the same.  
+- Create two sentences (strings) named `str1` and `str2` with the value "C++".  
+- Compare the sentences and store the result in a true-or-false place (boolean variable) named `isEqual`.  
+
+*Boolean Variable*: A variable that can only be true or false.
+
+## Answers:
+```cpp
+// Task 1:
 std::string firstName = "John";
 std::string lastName = "Doe";
 std::string fullName = firstName + " " + lastName;
@@ -123,4 +101,3 @@ sentence.erase(sentence.find(" hard"), 5);
 std::string str1 = "C++";
 std::string str2 = "C++";
 bool isEqual = (str1 == str2);
-</code></pre>
