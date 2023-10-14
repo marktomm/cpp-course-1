@@ -1,38 +1,56 @@
-#include <iostream>
-#include <string>
+// ATM
+
+#include <iostream> // std::cout, std::cin
+#include <string> // std::string
 
 using namespace std;
 
-void addMoney(double &balance, double amount) { balance += amount; }
+// V 1.0 requirements:
+// 1. single user bank account (use double for balance)
+// 2. can add money to balace
+// 3. can withdraw money from balance
+// 4. the program starts with 100.00 dollars in the account
+// 5. at the end of the program output the resulting balance
+// 6. make the program interactive (CLI - Command Line Interface)
+
+// V 1.1 requirements:
+// 1. Add the possibility for 10 accounts
+
+// adds money to the balance
+void addMoney(double &balance, double amount) { balance = balance + amount; }
 
 void withdrawMoney(double &balance, double amount) {
   if (balance < amount) {
-    cout << "Error: not enough funds\n";
+    std::cout << "Error: not enough funds\n";
     return;
   }
-  balance -= amount;
-}
 
+  balance = balance - amount;
+}
 int main() {
-  // Requirement 1: 10 accounts
+  // done point 1 and point 4
+  // double balance = 100.00;
+
+  // done point V1.1 1 and point V 1.0 4
   double balances[10];
-  
-  // Initialize all balances to 100.00
-  for (int i = 0; i < 10; ++i) {
-    balances[i] = 100.00;
+  int it = 0;
+  while (it < 10) {
+    balances[it] = 100.00;
+    it++;
   }
 
+  // endless loop
   bool isRun = true;
   string command;
   double amount;
   int index;
-  
+
   while (isRun) {
-    cout << "Enter account index (0-9)\n";
+    cout << "Enter the account index (0-9):\n";
     cin >> index;
-    
-    if (index < 0 || index >= 10) {
-      cout << "Invalid index.\n";
+
+    if (index > 9) {
+      cout << "Invalid index\n";
       continue;
     }
 
@@ -55,9 +73,11 @@ int main() {
     }
   }
   
-  // Output final balances
-  for (int i = 0; i < 10; ++i) {
-    cout << "Account " << i << " balance: " << balances[i] << "\n";
+  // done point V1.1 5
+  // cout << "Balance: " << balance << "\n";
+
+  for (int it = 0; it < 10; it++) {
+    cout << "Balance for user " << it << ": " << balances[it] << "\n";
   }
 
   return 0;
