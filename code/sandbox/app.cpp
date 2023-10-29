@@ -16,41 +16,57 @@
 
 using namespace std;
 
-void withdraw(double & balance, double amount) {
-    if(balance < amount) {
-        cout << "Insufficient funds bro!\n";
-        return; 
-    }
+void withdraw(double &balance, double amount) {
+  if (balance < amount) {
+    cout << "Insufficient funds bro!\n";
+    return;
+  }
 
-    balance = balance - amount;
+  balance = balance - amount;
 }
 
-void add(double & balance, double amount) {
-    balance = balance + amount;
-}
+void add(double &balance, double amount) { balance = balance + amount; }
+
+class BankAccount {
+public:
+  double money_;
+  string name;
+  string number;
+};
 
 int main() {
-    // V 1.0 req 1 and 4
-    // TYPE NAME = DATA;
-    double bankacc = 100.00;
+  BankAccount ba[10]; // array - a sequence of things
+  ba[0].money_ = 100.00;
+  ba[0].number = "5566 8899 0011 2233";
 
-    cout << "Dear user. Please enter command (withdraw amount, add amount)\n";
+  cout << "Hello! Enter your name:\n";
+  cin >> ba[0].name;
+
+  while (true) {
+    cout << "Dear " << ba[0].name
+         << ". Please enter command (withdraw amount, add amount, "
+            "quit)\n";
     // we have to collect a command from the user
     string command;
     cin >> command;
+
+    if (command == "quit") {
+      break;
+    }
 
     // we have collected the amount from the user
     double amount;
     cin >> amount;
 
-    cout << "User supplied cmd: " << command << " and amount: " << 
-    << amount << "\n";
+    cout << "User supplied cmd: " << command << " and amount: " << amount
+         << "\n";
 
-    if(command == "withdraw") {
-        withdraw(bankacc, amount);
+    if (command == "withdraw") {
+      withdraw(ba[0].money_, amount);
     } else if (command == "add") {
-        add(bankacc, amount);
+      add(ba[0].money_, amount);
     }
+  }
 
-    cout << "The resulting balance is " << bankacc << "\n";  
+  cout << "The resulting balance is " << ba[0].money_ << "\n";
 }
