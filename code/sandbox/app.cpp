@@ -11,11 +11,15 @@
 // V 1.1 requirements:
 // 1. Add user name (std::string) to bank account
 
+#include "bankaccount.h"
+
 #include <iostream> // std::cout and std::cin
 #include <string>
+#include <vector>
 
 using namespace std;
-
+// separation of concern
+// function
 void withdraw(double &balance, double amount) {
   if (balance < amount) {
     cout << "Insufficient funds bro!\n";
@@ -24,20 +28,32 @@ void withdraw(double &balance, double amount) {
 
   balance = balance - amount;
 }
-
+/*
+function signature:
+return_type fn_name(some_type arg_var_name, ...)
+*/
 void add(double &balance, double amount) { balance = balance + amount; }
 
-class BankAccount {
-public:
-  double money_;
-  string name;
-  string number;
-};
-
 int main() {
-  BankAccount ba[10]; // array - a sequence of things
-  ba[0].money_ = 100.00;
-  ba[0].number = "5566 8899 0011 2233";
+  using namespace MyCompanyLtdLibrary::SecondNs;
+  vector<BankAccount> ba(1000); // at this point the vector constructor is being run  
+
+  // loop - tsykkel
+  for(int i = 0; i < ba.size(); i++) {
+    ba[i].money_ = 100.00 + i;
+  }
+
+  for(int i = 0; i < ba.size(); i++) {
+    cout << "index: " << i << " money: " << ba[i].money_ << '\n';
+  }
+
+  BankAccount bac2;
+  ba.push_back(bac2);
+
+  for(int i = 0; i < ba.size(); i++) {
+
+    cout << "index: " << i << " money: " << ba[i].money_ << '\n';
+  }
 
   cout << "Hello! Enter your name:\n";
   cin >> ba[0].name;
