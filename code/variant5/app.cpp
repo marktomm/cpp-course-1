@@ -36,17 +36,30 @@ void add(double &balance, double amount) { balance = balance + amount; }
 
 int main() {
   using namespace MyCompanyLtdLibrary::SecondNs;
-  BankAccount ba; // at this point the vector constructor is being run
+  vector<BankAccount> ba(1000); // at this point the vector constructor is being run  
 
-  ba.money_ = 100.00;
+  // loop - tsykkel
+  for(int i = 0; i < ba.size(); i++) {
+    ba[i].money_ = 100.00 + i;
+  }
 
-  cout << "money: " << ba.money_ << '\n';
+  for(int i = 0; i < ba.size(); i++) {
+    cout << "index: " << i << " money: " << ba[i].money_ << '\n';
+  }
+
+  BankAccount bac2;
+  ba.push_back(bac2);
+
+  for(int i = 0; i < ba.size(); i++) {
+
+    cout << "index: " << i << " money: " << ba[i].money_ << '\n';
+  }
 
   cout << "Hello! Enter your name:\n";
-  cin >> ba.name;
+  cin >> ba[0].name;
 
   while (true) {
-    cout << "Dear " << ba.name
+    cout << "Dear " << ba[0].name
          << ". Please enter command (withdraw amount, add amount, "
             "quit)\n";
     // we have to collect a command from the user
@@ -65,11 +78,11 @@ int main() {
          << "\n";
 
     if (command == "withdraw") {
-      withdraw(ba.money_, amount);
+      withdraw(ba[0].money_, amount);
     } else if (command == "add") {
-      add(ba.money_, amount);
+      add(ba[0].money_, amount);
     }
   }
 
-  cout << "The resulting balance is " << ba.money_ << "\n";
+  cout << "The resulting balance is " << ba[0].money_ << "\n";
 }
