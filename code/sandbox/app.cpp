@@ -11,13 +11,25 @@
 // V 1.1 requirements:
 // 1. Add user name (std::string) to bank account
 
-#include "bankaccount.h"
-
 #include <iostream> // std::cout and std::cin
 #include <string>
 #include <vector>
 
 using namespace std;
+
+namespace MyCompanyLtdLibrary {
+namespace SecondNs {
+
+class BankAccount {
+public:
+  double money_; // fundamental type
+  string name;
+  string number;
+};
+
+}
+}
+
 // separation of concern
 // function
 void withdraw(double &balance, double amount) {
