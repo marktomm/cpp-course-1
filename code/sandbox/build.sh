@@ -15,7 +15,7 @@ fi
 # Check if the specified file exists
 if [ -f "$FILE_TO_BUILD" ]; then
     # THIS IS THE LINE THAT DOE THE BUILD
-    g++ "$FILE_TO_BUILD" -Og -ggdb -O0 -o app
+    g++ "$FILE_TO_BUILD" -std=c++17 -Og -ggdb -O0 -o app
 else
     echo "Error: File '$FILE_TO_BUILD' does not exist."
     exit 1

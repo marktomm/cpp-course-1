@@ -21,44 +21,57 @@ namespace MyCompanyLtdLibrary {
 namespace SecondNs {
 
 class BankAccount {
-public:
-  double money_; // fundamental type
+private:
+// encapsulation
+  double money_{0}; // fundamental type 
   string name;
   string number;
-};
 
-}
-}
-
-// separation of concern
-// function
-void withdraw(double &balance, double amount) {
-  if (balance < amount) {
-    cout << "Insufficient funds bro!\n";
-    return;
+public:
+  double getMoney() {
+    return money_;
   }
 
-  balance = balance - amount;
-}
-/*
-function signature:
-return_type fn_name(some_type arg_var_name, ...)
-*/
-void add(double &balance, double amount) { balance = balance + amount; }
+  string getName() {
+    return name;
+  }
+
+  // these algorithms/functions alter the state of the variable of type
+  // BankAccount
+  void setName(string n) {
+    name = n;
+  }
+
+  void withdraw(double amount) {
+    if (money_ < amount) {
+      cout << "Insufficient funds bro!\n";
+      return;
+    }
+
+    money_ = money_ - amount;
+  }
+
+  void add(double amount) { money_ = money_ + amount; }
+};
+
+} // namespace SecondNs
+} // namespace MyCompanyLtdLibrary
 
 int main() {
   using namespace MyCompanyLtdLibrary::SecondNs;
   BankAccount ba; // at this point the vector constructor is being run
 
-  ba.money_ = 100.00;
+  ba.add(100.00);
 
-  cout << "money: " << ba.money_ << '\n';
+  cout << "money: " << ba.getMoney() << '\n';
 
   cout << "Hello! Enter your name:\n";
-  cin >> ba.name;
+  string temporary;
+  cin >> temporary;
+  ba.setName(temporary);
 
   while (true) {
-    cout << "Dear " << ba.name
+    cout << "Dear " << ba.getName()
          << ". Please enter command (withdraw amount, add amount, "
             "quit)\n";
     // we have to collect a command from the user
@@ -77,11 +90,11 @@ int main() {
          << "\n";
 
     if (command == "withdraw") {
-      withdraw(ba.money_, amount);
+      ba.withdraw(amount);
     } else if (command == "add") {
-      add(ba.money_, amount);
+      ba.add(amount);
     }
   }
 
-  cout << "The resulting balance is " << ba.money_ << "\n";
+  cout << "The resulting balance is " << ba.getMoney() << "\n";
 }
