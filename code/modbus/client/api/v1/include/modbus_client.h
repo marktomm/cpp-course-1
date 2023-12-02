@@ -1,4 +1,4 @@
-#include <cstddef>
+#include <cstdint>
 
 #include <iostream>
 #include <string>
@@ -19,7 +19,7 @@ public:
   bool PollFn2Address(uint16_t addr);
   uint16_t PollFn3Address(uint16_t addr);
   uint16_t PollFn4Address(uint16_t addr);
-  void Disonnect();
+  void Disconnect();
 };
 } // namespace Modbus
 } // namespace Aig

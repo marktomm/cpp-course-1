@@ -29,18 +29,18 @@ bool ModbusClient::PollFn2Address(uint16_t addr) {
 }
 
 uint16_t ModbusClient::PollFn3Address(uint16_t addr) {
-  bool result = true;
+  uint16_t result = 100;
   cout << "polling FN3 " << addr << ", result : " << result << '\n';
   return result;
 }
 
 uint16_t ModbusClient::PollFn4Address(uint16_t addr) {
-  bool result = true;
+  uint16_t result = 100;
   cout << "polling FN4 " << addr << ", result : " << result << '\n';
   return result;
 }
 
-void ModbusClient::Disonnect() {
+void ModbusClient::Disconnect() {
   isConnected_ = false;
   cout << "disconnected\n";
 }
